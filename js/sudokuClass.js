@@ -47,20 +47,20 @@ export default class Sudoku {
   }
   
   digHoles() {
-    this.terminalPattern = this.solvedBoard.slice().map(x => x.slice())
-	  let positions = [];
-	  for (let i = 0; i < 9; i++) {
-	    for (let j = 0; j < 9; j++) {
-	      positions.push([i, j])
-	    }
-	  }
+    this.terminalPattern = this.solvedBoard.slice().map(x => x.slice()) 
+    let positions = [];
+    for (let i = 0; i < 9; i++) {
+      for (let j = 0; j < 9; j++) {
+        positions.push([i, j])
+      }
+    }
 	
-	let randomIndex = Math.floor(Math.random() * 81)
-  //let's make hole digging more random my reversing a part of the indices array
-	positions = positions.slice(0, randomIndex).reverse().concat(positions.slice(randomIndex)) 
+    let randomIndex = Math.floor(Math.random() * 81)
+    //let's make hole digging more random my reversing a part of the indices array
+    positions = positions.slice(0, randomIndex).reverse().concat(positions.slice(randomIndex)) 
 	
     positions.forEach( ([i, j]) => {
-	  let temp = this.terminalPattern[i][j];
+      let temp = this.terminalPattern[i][j];
       this.terminalPattern[i][j] = 0; // make the current value a 0 and check if the puzzle still has only one possible solution
       if (this.solve(this.terminalPattern, [i, j, temp])) { //if it can be solved with another character
         this.terminalPattern[i][j] = temp; // don't make it a zero, leave the current value
