@@ -38,7 +38,11 @@ export default class Board {
       return arr.map(obj => obj.value)
     }
   }
-
+  
+  /* 
+  constraint parameter is important for hole digging, because we cannot use the number from the terminal pattern (we have only 8 choices)
+  constraint array includes row index, column index and the value
+  */
   setInitialState(puzzle, constraint = []){
     //assign every cell a Cell object
     for (let i = 0; i < 9; i++) {
