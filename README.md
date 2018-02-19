@@ -9,4 +9,6 @@ I used OOP for this project, trying to create a class for every different part o
 
 Program works in IE11, Firefox and Chrome. 
 
+Live preview : http://festive-kepler-02e63a.bitballoon.com/ 
+
 
