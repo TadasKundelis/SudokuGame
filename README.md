@@ -7,6 +7,6 @@ I use the traditional hole-digging algorithm to produce a terminal pattern. The 
 
 Program works in IE11, Firefox and Chrome. 
 
-Live preview : http://festive-kepler-02e63a.bitballoon.com/ 
+Live preview : https://festive-kepler-02e63a.netlify.app/
 
 
